@@ -13,7 +13,11 @@ module.exports = {
     container: {
       center: true,
       padding: '2rem',
-
+    },
+    colors: {
+      red: '#EF495F',
+      accent: '#ef4951',
+      white: '#ffffff',
     },
   },
   plugins: [],

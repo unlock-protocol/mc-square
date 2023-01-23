@@ -4,9 +4,34 @@ import { Inter } from "@next/font/google";
 import Link from "next/link";
 import { FaCalendar, FaTelegramPlane } from "react-icons/fa";
 import { GoLocation, GoDiffAdded } from "react-icons/go";
+import { useRouter } from "next/router";
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
+  const router = useRouter();
+
+  const checkout = () => {
+    const paywallConfig = {
+      icon:
+        "https://forum.metacartel.org/uploads/db3603/original/1X/29dbb63a8ab5d39895ac88e4b737acfff8d5cf9c.png",
+      title: "MC^2 EthDenver Tickets!",
+      locks: {
+        "0xe1cb3d896ec40f185baf427f4bb202cfb309db95": {
+          network: 100,
+          emailRequired: true,
+        },
+      },
+      pessimistic: true,
+    };
+
+    const url = new URL("https://app.unlock-protocol.com/checkout");
+    const redirectUri = new URL(window.location.href);
+    url.searchParams.set("redirectUri", redirectUri.toString());
+    url.searchParams.set("paywallConfig", JSON.stringify(paywallConfig));
+    // Handle success?
+    router.push(url.toString());
+  };
+
   return (
     <>
       <Head>
@@ -15,11 +40,20 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className="container mx-auto">
-        <h1 className="text-5xl mt-8 md:mt-48 mb-8">MC^2 EthDenver</h1>
-        <div className="grid md:grid-cols-2 gap-4	">
+      <main className="container mx-auto pt-8">
+        <div className="flex md:hidden justify-center md:justify-start">
+          <Image
+            alt="chiliface"
+            height="100"
+            width="100"
+            src="/chiliface-circle.svg"
+            className="my-4"
+          />
+        </div>
+        <div className="grid md:grid-cols-2 gap-16 md:mt-48 ">
           <div>
-            <p className="my-4 text-xl">
+            <h1 className="text-5xl mb-8">MC^2 EthDenver</h1>
+            <p className="text-xl">
               Come and experience the highest vibes in Denver, on March 4th we
               are taking over the MileHigh Station with help from{" "}
               <Link
@@ -63,11 +97,23 @@ export default function Home() {
               </Link>{" "}
               for some special NFT perks
             </p>
-            <button className="w-full bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+            <button
+              onClick={checkout}
+              className="w-full bg-red hover:bg-accent text-white font-bold py-4 px-4 rounded"
+            >
               Register
             </button>
           </div>
-          <div className="my-4 text-xl">
+          <div className="text-xl md:w-2/3">
+            <div className="hidden md:flex justify-center md:justify-start">
+              <Image
+                alt="chiliface"
+                height="100"
+                width="100"
+                src="/chiliface-circle.svg"
+                className="my-4"
+              />
+            </div>
             <ul>
               <li className="mb-4">
                 <FaCalendar className="inline mr-2" />
