@@ -14,7 +14,7 @@ export default function Home() {
     const paywallConfig = {
       icon:
         "https://forum.metacartel.org/uploads/db3603/original/1X/29dbb63a8ab5d39895ac88e4b737acfff8d5cf9c.png",
-      title: "MC^2 EthDenver Tickets!",
+      title: "MC² EthDenver Tickets!",
       locks: {
         "0xe1cb3d896ec40f185baf427f4bb202cfb309db95": {
           network: 100,
@@ -36,8 +36,8 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>MC^2 EthDenver</title>
-        <meta name="description" content="MC^2 EthDenver" />
+        <title>MC² EthDenver</title>
+        <meta name="description" content="MC² EthDenver" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
@@ -53,7 +53,7 @@ export default function Home() {
         </div>
         <div className="grid md:grid-cols-2 gap-16 md:mt-48 ">
           <div>
-            <h1 className="text-5xl mb-8">MC^2 EthDenver</h1>
+            <h1 className="text-5xl mb-8">MC² EthDenver</h1>
             <p className="text-xl">
               Come and experience the highest vibes in Denver, on March 4th we
               are taking over the MileHigh Station with help from{" "}
