@@ -19,6 +19,7 @@ export default function Home() {
         "0xe1cb3d896ec40f185baf427f4bb202cfb309db95": {
           network: 100,
           emailRequired: true,
+          password: true,
         },
       },
       pessimistic: true,
