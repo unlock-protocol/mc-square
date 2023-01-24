@@ -118,7 +118,7 @@ export default function Home() {
             <ul>
               <li className="mb-4">
                 <FaCalendar className="inline mr-2" />
-                Saturday March 4th, 6-10pm
+                Saturday March 4th, 5-11pm
               </li>
               <li className="mb-4">
                 <Link
