@@ -15,6 +15,7 @@ module.exports = {
       padding: '2rem',
     },
     colors: {
+      blue: '#787191',
       red: '#EF495F',
       accent: '#ef4951',
       white: '#ffffff',
