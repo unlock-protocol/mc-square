@@ -58,7 +58,7 @@ export default function Home() {
               src="/chiliface-circle.svg"
             />
           </div>
-          <div className="grid md:grid-cols-2 gap-16 md:mt-48 rounded rounded-lg bg-white p-5	">
+          <div className="grid md:grid-cols-2 gap-16 md:mt-48 rounded rounded-lg bg-white p-5	mb-8">
             <div className="">
               <h1 className="text-5xl mb-8">MC² EthDenver</h1>
               <p className="text-xl">
