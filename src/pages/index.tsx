@@ -87,8 +87,15 @@ export default function Home() {
                 >
                   Hedgey Finance
                 </Link>
-                , Dip DAO and many more of the Web3 homies for this one night
-                event.
+                ,{" "}
+                <Link
+                  target="_blank"
+                  className="underline"
+                  href="https://weloveguac.org/ "
+                >
+                  Dip DAO
+                </Link>{" "}
+                and many more of the Web3 homies for this one night event.
               </p>
               <p className="my-4 text-xl">
                 🙌🏼 Join us for Drinks, Food, and live Music in the classic iron
