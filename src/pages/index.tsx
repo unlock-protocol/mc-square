@@ -21,11 +21,11 @@ export default function Home() {
           emailRequired: true,
           password: true,
         },
-        "0xe204a6976676097631ec65d26500acbd445ad3f4": {
-          network: 100,
-          emailRequired: true,
-          password: true,
-        },
+        // "0xe204a6976676097631ec65d26500acbd445ad3f4": {
+        //   network: 100,
+        //   emailRequired: true,
+        //   password: true,
+        // },
       },
       pessimistic: true,
     };
